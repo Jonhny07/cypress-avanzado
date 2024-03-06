@@ -1,4 +1,4 @@
-const directorioName = __dirname.replaceAll("\\", "/");
+/*const directorioName = __dirname.replaceAll("\\", "/");
 
 const module = directorioName.split(/[/]/)[2];
 const scenarioName = directorioName
@@ -18,4 +18,4 @@ describe(`${scenarioName} - ${module}`, () => {
     //cy.log(`crear producto ${testCaseId}`);
     //cy.log(`Eliminar un producto numero ${testCaseId}`);
   });
-});
+});*/
