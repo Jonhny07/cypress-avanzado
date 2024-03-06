@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
    inputs:
      module:
-     description: 'module folder'
-     default: "**"
-     required: true
+       description: 'module folder'
+       default: "**"
+       required: true
      scenario:
        description: 'scenario to execute'
        default: "**"
