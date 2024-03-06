@@ -19,3 +19,4 @@ describe(`${scenarioName} - ${module}`, () => {
     //cy.log(`Eliminar un producto numero ${testCaseId}`);
   });
 });*/
+
