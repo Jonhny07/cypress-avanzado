@@ -1,4 +1,4 @@
-/*const directorioName = __dirname.replaceAll("\\", "/");
+const directorioName = __dirname.replaceAll("\\", "/");
 
 const module = directorioName.split(/[/]/)[2];
 const scenarioName = directorioName
@@ -8,15 +8,17 @@ const scenarioName = directorioName
   .join("-");
 const testCaseId = directorioName.split(/[-]/).pop();
 describe(`${scenarioName} - ${module}`, () => {
-  it("Deberia permitir al usuario eliminar un producto", () => {
+  it("Deberia permitir al usuario editar un producto", () => {
     cy.fixture(`${module}/${scenarioName}-${testCaseId}/data`).then((data) => {
       // cy.log(data);
       data.producto = `${data.producto}-${testCaseId}`;
+      cy.log(`eliminar producto ${data.producto} si existe`);
+
       cy.log(`crear producto ${data.producto}`);
-      cy.log(`Eliminar un producto numero ${data.producto}`);
+      cy.log(`editar un producto numero ${data.producto}`);
     });
     //cy.log(`crear producto ${testCaseId}`);
     //cy.log(`Eliminar un producto numero ${testCaseId}`);
   });
-});*/
+});
 
