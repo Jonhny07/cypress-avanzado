@@ -24,6 +24,10 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import "./requests/product";
+import "./assertions/taskModel";
+import "./assertions/productModel"
+// import sqlServer from 'cypress-sql-server';
+// sqlServer.loadDBCommands()
 
 Cypress.Commands.add("login", (usuario, password) => {
   cy.request({
@@ -38,5 +42,17 @@ Cypress.Commands.add("login", (usuario, password) => {
     window.localStorage.setItem("user", respuesta.body.user.username);
     window.localStorage.setItem("userId", respuesta.body.user._id);
     Cypress.env().token = respuesta.body.token;
+  });
+});
+
+Cypress.Commands.add("getByDataCy", (selector) => {
+  return cy.get(`[data-cy=${selector}]`);
+});
+
+
+Cypress.Commands.add('formatNumberToUSCurrency', (number) => {
+  return number.toLocaleString('en-US', {
+      style: 'currency',
+      currency: 'USD',
   });
 });

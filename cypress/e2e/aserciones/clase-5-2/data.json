@@ -1,0 +1,44 @@
+{
+    "productos": {
+        "producto1": {
+            "quantity": 2,
+            "name": "Buzo Negro",
+            "price": 44.34
+        },
+        "producto2": {
+            "quantity": 2,
+            "name": "Medias Negras",
+            "price": 5.43
+        },
+        "producto3": {
+            "quantity": 2,
+            "name": "Chomba Verde",
+            "price": 15.75
+        },
+        "producto4": {
+            "quantity": 2,
+            "name": "Sweater rosa",
+            "price": 14.86
+        },
+        "producto5": {
+            "quantity": 2,
+            "name": "Jean Azul",
+            "price": 11.98
+        },
+        "producto6": {
+            "quantity": 2,
+            "name": "Campera Negra",
+            "price": 20.14
+        },
+        "producto7": {
+            "quantity": 2,
+            "name": "Patanlon Pijama Rojo",
+            "price": 12.23
+        },
+        "producto8": {
+            "quantity": 2,
+            "name": "Chomba Amarilla",
+            "price": 18.33
+        }
+    }
+}

@@ -16,6 +16,11 @@ describe(`${scenarioName} - ${module}`, () => {
   });
   it("Deberia permitir al usuario editar un producto", () => {
     cy.fixture(`${module}/${scenarioName}-${testCaseId}/data`).then((data) => {
+      ///primera opcion
+     /* cy.obtenerProducto(data.product.id).its('body.products.docs').each((product)=>{
+        cy.eliminarProducto2(product._id)
+      })*/
+      ////2da opcion
       cy.eliminarProducto(data.product.id);
       cy.crearProducto(data.product);
       cy.get('[data-cy="onlineshoplink"]').click();
