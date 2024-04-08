@@ -1,0 +1,14 @@
+{
+  "product1": {
+      "name": "Zapatillas Azules",
+      "price": 30.33
+  },
+  "product2": {
+      "name": "Buzo Negro",
+      "price": 30.33
+  },
+  "product3": {
+      "name": "Remera Negra",
+      "price": 30.33
+  }
+}

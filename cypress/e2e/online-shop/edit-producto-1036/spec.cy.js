@@ -7,18 +7,26 @@ const scenarioName = directorioName
   .slice(0, -1)
   .join("-");
 const testCaseId = directorioName.split(/[-]/).pop();
+
 describe(`${scenarioName} - ${module}`, () => {
+
+  before(() => {
+    cy.login(Cypress.env().usuario, Cypress.env().password);
+    cy.visit("");
+  });
   it("Deberia permitir al usuario editar un producto", () => {
     cy.fixture(`${module}/${scenarioName}-${testCaseId}/data`).then((data) => {
-      // cy.log(data);
-      data.producto = `${data.producto}-${testCaseId}`;
-      cy.log(`eliminar producto ${data.producto} si existe`);
-
-      cy.log(`crear producto ${data.producto}`);
-      cy.log(`editar un producto numero ${data.producto}`);
+      ///primera opcion
+     /* cy.obtenerProducto(data.product.id).its('body.products.docs').each((product)=>{
+        cy.eliminarProducto2(product._id)
+      })*/
+      ////2da opcion
+      cy.eliminarProducto(data.product.id);
+      cy.crearProducto(data.product);
+      cy.get('[data-cy="onlineshoplink"]').click();
+      cy.get('[data-cy="search-type"]').select("ID");
+      cy.get('[data-cy="search-bar"]').type(`${data.product.id} {enter}`);
+      cy.log("edit product");
     });
-    //cy.log(`crear producto ${testCaseId}`);
-    //cy.log(`Eliminar un producto numero ${testCaseId}`);
   });
 });
-

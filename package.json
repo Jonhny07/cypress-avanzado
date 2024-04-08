@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress open --e2e -b electron",
-    "runOnlineShop":"npx cupress run --spec 'cypress/e2e/online-shop/**/**.cy.js'"
+    "runOnlineShop": "npx cupress run --spec 'cypress/e2e/online-shop/**/**.cy.js'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.6"
+    "cypress": "^13.6.6",
+    "cypress-sql-server": "^1.0.0",
+    "pg": "^8.11.3"
   }
 }
